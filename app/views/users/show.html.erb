@@ -1,0 +1,28 @@
+<%
+=begin%>
+ <%= render "devise/shared/header" %>
+<%
+=end%>
+
+<h2>設定</h2>
+
+<div class="userContainer">
+  <a href="/users/account">アカウント</a>
+  <a href="/users/profile">プロフィール</a>
+</div>
+
+<div class="accountContainer">
+  <h3>アカウント</h3>
+  <a href="/users/edit">編集</a>
+  <h2>メールアドレス：</h2>
+  <h2>パスワード：<%=    %></h2>
+</div>
+
+<%
+=begin%>
+ <%= link_to 'アカウント情報', edit_user_registration_path %>
+<%= link_to 'プロフィール', users_update_path %>
+
+<%= render "devise/shared/footer" %>
+<%
+=end%>

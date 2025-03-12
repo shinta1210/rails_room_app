@@ -1,0 +1,23 @@
+
+<h2>アカウント</h2>
+
+
+<%= form_with model: @user do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :email ,"メールアドレス" %></th>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :password ,"パスワード" %></th>
+      <td><%= f.text_field :password %></td>
+    </tr>
+  </table>
+
+  <div>
+    <ul>
+      <li><%= f.submit "編集を完了する" %></li>
+      <li><%= link_to "キャンセル", "/users/account" %></li>
+    </ul>
+  </div>
+<% end %>

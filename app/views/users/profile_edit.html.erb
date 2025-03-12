@@ -1,0 +1,29 @@
+
+<h2>プロフィール</h2>
+
+
+<h3>ユーザー編集</h3>
+
+<%= form_with model: @user do |f| %>
+  <table>
+    <tr>
+      <th><%= f.label :profile_image_id ,"アイコン画像" %></th>
+      <td><%= f.text_field :profile_image_id %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :username ,"名前" %></th>
+      <td><%= f.text_field :username %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :profile ,"自己紹介" %></th>
+      <td><%= f.text_area :profile %></td>
+    </tr>
+  </table>
+
+  <div>
+    <ul>
+      <li><%= f.submit "編集を完了する" %></li>
+      <li><%= link_to "キャンセル", "/users/profile" %></li>
+    </ul>
+  </div>
+<% end %>
